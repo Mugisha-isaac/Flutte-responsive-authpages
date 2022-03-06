@@ -32,6 +32,25 @@ class HomePage extends StatelessWidget {
   final lightTextColor = Color(0Xff999999);
   final textFieldColor = Color(0XffF5F6FA);
   final borderColor = Color(0XffD9D9D9);
+  Widget getTextField({required String hint}) {
+    return TextField(
+      decoration: InputDecoration(
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8.r),
+            borderSide: const BorderSide(color: Colors.transparent, width: 0),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8.r),
+            borderSide: const BorderSide(color: Colors.transparent, width: 0),
+          ),
+          contentPadding:
+              EdgeInsets.symmetric(horizontal: 16.w, vertical: 14.h),
+          filled: true,
+          fillColor: textFieldColor,
+          hintText: "first Name",
+          hintStyle: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w400)),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -70,20 +89,6 @@ class HomePage extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 24.h),
-              TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8.r),
-                    borderSide:
-                        const BorderSide(color: Colors.transparent, width: 0),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8.r),
-                    borderSide:
-                        const BorderSide(color: Colors.transparent, width: 0),
-                  ),
-                ),
-              ),
             ],
           ),
         ),
