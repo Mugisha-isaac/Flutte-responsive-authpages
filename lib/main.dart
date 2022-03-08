@@ -47,7 +47,7 @@ class HomePage extends StatelessWidget {
               EdgeInsets.symmetric(horizontal: 16.w, vertical: 14.h),
           filled: true,
           fillColor: textFieldColor,
-          hintText: "first Name",
+          hintText: hint,
           hintStyle: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w400)),
     );
   }
@@ -89,6 +89,50 @@ class HomePage extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 24.h),
+              getTextField(hint: "Full Name"),
+              SizedBox(height: 16.h),
+              getTextField(hint: "Email"),
+              SizedBox(height: 16.h),
+              getTextField(hint: "Password"),
+              SizedBox(height: 24.h),
+              getTextField(hint: "Confirm Password"),
+              SizedBox(height: 24.h),
+              SizedBox(
+                width: double.infinity,
+                child: TextButton(
+                  onPressed: () {},
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(purpleColor),
+                      foregroundColor: MaterialStateProperty.all(Colors.white),
+                      padding: MaterialStateProperty.all(
+                          EdgeInsets.symmetric(vertical: 14.h)),
+                      textStyle: MaterialStateProperty.all(TextStyle(
+                          fontSize: 14.sp, fontWeight: FontWeight.w700))),
+                  child: const Text("Create Account"),
+                ),
+              ),
+              SizedBox(
+                height: 16.h,
+              ),
+              Row(
+                children: [
+                  Expanded(child: Divider()),
+                  SizedBox(
+                    width: 16.w,
+                  ),
+                  Text(
+                    "or signup via",
+                    style: TextStyle(
+                        fontSize: 14.sp,
+                        fontWeight: FontWeight.w500,
+                        color: lightTextColor),
+                  ),
+                  SizedBox(
+                    width: 16.w,
+                  ),
+                  Expanded(child: Divider())
+                ],
+              )
             ],
           ),
         ),
