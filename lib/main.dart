@@ -79,6 +79,9 @@ class HomePage extends StatelessWidget {
                         fontWeight: FontWeight.w600,
                         color: lightTextColor),
                   ),
+                  SizedBox(
+                    width: 10.w,
+                  ),
                   Text(
                     "Login",
                     style: TextStyle(
@@ -132,7 +135,62 @@ class HomePage extends StatelessWidget {
                   ),
                   Expanded(child: Divider())
                 ],
-              )
+              ),
+              SizedBox(
+                height: 16.h,
+              ),
+              SizedBox(
+                width: double.infinity,
+                child: TextButton(
+                  onPressed: () {},
+                  style: ButtonStyle(
+                      side: MaterialStateProperty.all(
+                          BorderSide(color: borderColor)),
+                      foregroundColor: MaterialStateProperty.all(darkTextColor),
+                      padding: MaterialStateProperty.all(
+                          EdgeInsets.symmetric(vertical: 14.h)),
+                      textStyle: MaterialStateProperty.all(TextStyle(
+                          fontSize: 14.sp, fontWeight: FontWeight.w700))),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Image.asset(
+                        "assets/Google.png",
+                        width: 30.w,
+                        height: 30.h,
+                      ),
+                      SizedBox(
+                        width: 10.w,
+                      ),
+                      Text("Google"),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 16.h,
+              ),
+              Wrap(
+                children: [
+                  Text(
+                    "By signing up to Masterminds you agree to our",
+                    style: TextStyle(
+                        fontSize: 14.sp,
+                        fontWeight: FontWeight.w600,
+                        color: lightTextColor),
+                  ),
+                  SizedBox(
+                    width: 10.w,
+                  ),
+                  Text(
+                    "terms and conditions",
+                    style: TextStyle(
+                        fontSize: 14.sp,
+                        fontWeight: FontWeight.w700,
+                        color: purpleColor),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
